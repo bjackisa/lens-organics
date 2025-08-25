@@ -26,8 +26,7 @@ export function OperationsPreview() {
     {
       icon: TreePine,
       title: "Premium Tree Crops",
-      description:
-        "Hass avocado, macadamia, and robusta coffee cultivation for export markets and value-added oil production",
+      description: "Hass avocado and macadamia cultivation for export markets and value-added oil production",
       image: "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=800&h=600&fit=crop&crop=center",
       status: "Expanding",
       location: "Nakaseke & Bukeerere",
@@ -139,7 +138,7 @@ export function OperationsPreview() {
               size="lg"
               className="border-emerald-600 text-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-950 bg-transparent"
             >
-              <Link href="/contact">Partner With Us</Link>
+              <Link href="/investors">Investment Opportunities</Link>
             </Button>
           </div>
         </div>

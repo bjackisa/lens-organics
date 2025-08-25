@@ -34,7 +34,7 @@ export function OperationsGrid() {
       statusColor: "bg-emerald-500",
       description:
         "High-yield plantain cultivation focusing on the popular Gonja variety for local and regional markets, supporting food security initiatives.",
-      image: "https://images.unsplash.com/photo-1605034313761-73ea4a0cfbf3?w=800&h=600&fit=crop&crop=center",
+      image: "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=800&h=600&fit=crop&crop=center",
       keyMetrics: [
         "Multiple harvest cycles annually",
         "Local market preference variety",
@@ -52,12 +52,11 @@ export function OperationsGrid() {
       status: "Expanding",
       statusColor: "bg-blue-500",
       description:
-        "Hass avocado, macadamia, and robusta coffee cultivation targeting premium export markets with plans for value-added oil production.",
-      image: "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?w=800&h=600&fit=crop&crop=center",
+        "Hass avocado and macadamia cultivation targeting premium export markets with plans for value-added oil production.",
+      image: "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=800&h=600&fit=crop&crop=center",
       keyMetrics: [
         "Hass avocado premium variety",
         "Macadamia high-value nuts",
-        "Robusta coffee - 3 acres small scale",
         "Export market positioning",
         "Oil extraction planning",
       ],
@@ -73,7 +72,7 @@ export function OperationsGrid() {
       statusColor: "bg-emerald-500",
       description:
         "Modern poultry systems producing premium eggs with focus on organic feed integration and high welfare standards.",
-      image: "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=800&h=600&fit=crop&crop=center",
+      image: "https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=800&h=600&fit=crop&crop=center",
       keyMetrics: [
         "Modern housing systems",
         "Organic feed integration",
