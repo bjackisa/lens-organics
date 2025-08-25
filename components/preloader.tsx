@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import Image from "next/image"
 
 export function Preloader() {
   const [isLoading, setIsLoading] = useState(true)
@@ -20,14 +19,7 @@ export function Preloader() {
     <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-background/95 backdrop-blur-sm">
       <div className="flex flex-col items-center space-y-6">
         <div className="relative w-24 h-24">
-          <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LENS-ORGANICS-L20919932%20%281%29-mSb5zb1b7GJB8CKhgldHxT10U2eVrz.gif"
-            alt="Lens Organics Loading"
-            width={96}
-            height={96}
-            className="w-full h-full object-contain"
-            priority
-          />
+          <img src="/images/lens-logo.png" alt="Lens Organics Loading" className="w-full h-full object-contain" />
         </div>
 
         {/* Windows 11 style loading indicator */}
