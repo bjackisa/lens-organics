@@ -34,7 +34,7 @@ export function OperationsGrid() {
       statusColor: "bg-emerald-500",
       description:
         "High-yield plantain cultivation focusing on the popular Gonja variety for local and regional markets, supporting food security initiatives.",
-      image: "/images/mature-lemongrass.png",
+      image: "https://images.unsplash.com/photo-1605034313761-73ea4a0cfbf3?w=800&h=600&fit=crop&crop=center",
       keyMetrics: [
         "Multiple harvest cycles annually",
         "Local market preference variety",
@@ -52,11 +52,12 @@ export function OperationsGrid() {
       status: "Expanding",
       statusColor: "bg-blue-500",
       description:
-        "Hass avocado and macadamia cultivation targeting premium export markets with plans for value-added oil production.",
-      image: "/images/lemongrass-plantation.png",
+        "Hass avocado, macadamia, and robusta coffee cultivation targeting premium export markets with plans for value-added oil production.",
+      image: "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?w=800&h=600&fit=crop&crop=center",
       keyMetrics: [
         "Hass avocado premium variety",
         "Macadamia high-value nuts",
+        "Robusta coffee - 3 acres small scale",
         "Export market positioning",
         "Oil extraction planning",
       ],
@@ -72,7 +73,7 @@ export function OperationsGrid() {
       statusColor: "bg-emerald-500",
       description:
         "Modern poultry systems producing premium eggs with focus on organic feed integration and high welfare standards.",
-      image: "/images/farm-operations.png",
+      image: "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=800&h=600&fit=crop&crop=center",
       keyMetrics: [
         "Modern housing systems",
         "Organic feed integration",
@@ -91,7 +92,7 @@ export function OperationsGrid() {
       statusColor: "bg-yellow-500",
       description:
         "Sustainable pond systems designed for premium catfish production targeting hospitality and retail sectors.",
-      image: "/images/processing-facility.png",
+      image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=600&fit=crop&crop=center",
       keyMetrics: [
         "Pond infrastructure complete",
         "Sustainable water management",
@@ -110,7 +111,7 @@ export function OperationsGrid() {
       statusColor: "bg-orange-500",
       description:
         "Nutritious oat cultivation and processing targeting health-conscious consumer markets with functional food applications.",
-      image: "/images/lemongrass-harvest.png",
+      image: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=800&h=600&fit=crop&crop=center",
       keyMetrics: [
         "Health food market focus",
         "Functional nutrition benefits",

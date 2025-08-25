@@ -29,7 +29,7 @@ export function Navigation() {
         { href: "/quality", label: "Quality Standards" },
       ],
     },
-    { href: "/investors", label: "Investors" },
+    { href: "/partners", label: "Partners" }, // Replaced "Investors" with "Partners" to focus on business partnerships
     { href: "/contact", label: "Contact" },
   ]
 

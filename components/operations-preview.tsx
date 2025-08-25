@@ -19,15 +19,16 @@ export function OperationsPreview() {
       title: "Plantain (Gonja) Farming",
       description:
         "High-yield plantain cultivation for local and regional markets, supporting food security initiatives",
-      image: "/images/mature-lemongrass.png",
+      image: "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=800&h=600&fit=crop&crop=center",
       status: "Active Production",
       location: "Multiple Sites",
     },
     {
       icon: TreePine,
       title: "Premium Tree Crops",
-      description: "Hass avocado and macadamia cultivation for export markets and value-added oil production",
-      image: "/images/lemongrass-plantation.png",
+      description:
+        "Hass avocado, macadamia, and robusta coffee cultivation for export markets and value-added oil production",
+      image: "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=800&h=600&fit=crop&crop=center",
       status: "Expanding",
       location: "Nakaseke & Bukeerere",
     },
@@ -35,7 +36,7 @@ export function OperationsPreview() {
       icon: Egg,
       title: "Layer Chicken Operations",
       description: "Modern poultry systems producing premium eggs with focus on organic feed and welfare standards",
-      image: "/images/farm-operations.png",
+      image: "https://images.unsplash.com/photo-1548551763-46a013bb70d5?w=800&h=600&fit=crop&crop=center",
       status: "Active Production",
       location: "Integrated Facilities",
     },
@@ -43,7 +44,7 @@ export function OperationsPreview() {
       icon: Fish,
       title: "Catfish Aquaculture",
       description: "Sustainable pond systems ready for premium catfish production targeting hospitality sector",
-      image: "/images/processing-facility.png",
+      image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=600&fit=crop&crop=center",
       status: "Infrastructure Ready",
       location: "Pond Systems Complete",
     },
@@ -51,7 +52,7 @@ export function OperationsPreview() {
       icon: Wheat,
       title: "Oatmeal Production",
       description: "Nutritious oat cultivation and processing for health-conscious consumer markets",
-      image: "/images/lemongrass-harvest.png",
+      image: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=800&h=600&fit=crop&crop=center",
       status: "Development Phase",
       location: "Planning Stage",
     },
@@ -138,7 +139,7 @@ export function OperationsPreview() {
               size="lg"
               className="border-emerald-600 text-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-950 bg-transparent"
             >
-              <Link href="/investors">Investment Opportunities</Link>
+              <Link href="/contact">Partner With Us</Link>
             </Button>
           </div>
         </div>

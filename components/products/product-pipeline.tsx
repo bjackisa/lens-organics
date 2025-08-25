@@ -137,6 +137,29 @@ export function ProductPipeline() {
       },
       marketSegments: ["Restaurant sector", "Fresh retail", "Regional export"],
     },
+    {
+      name: "Premium Robusta Coffee Beans",
+      icon: TreePine,
+      category: "Specialty Coffee",
+      timeline: "Q3 2026",
+      status: "Early Development",
+      statusColor: "bg-orange-500",
+      description: "Small-scale premium robusta coffee beans from 3-acre cultivation for specialty coffee markets",
+      marketValue: "UGX 18,500-37,000/kg",
+      applications: [
+        "Specialty coffee roasters",
+        "Premium coffee blends",
+        "Direct trade partnerships",
+        "Local coffee shop supply",
+      ],
+      technicalSpecs: {
+        variety: "Premium robusta variety",
+        cultivation: "3-acre small-scale operation",
+        processing: "Currently raw bean sales",
+        quality: "Specialty grade potential",
+      },
+      marketSegments: ["Specialty coffee", "Local roasters", "Premium blends"],
+    },
   ]
 
   return (

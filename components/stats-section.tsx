@@ -37,7 +37,7 @@ export function StatsSection() {
       icon: Users,
       value: "B2B",
       label: "Focus",
-      description: "Clients & investors",
+      description: "Business partnerships",
     },
     {
       icon: Globe,
@@ -61,8 +61,9 @@ export function StatsSection() {
             Transforming Agriculture Through Integration
           </h2>
           <p className="text-muted-foreground text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-            Our unified management approach across multiple agricultural sectors creates unprecedented value chains,
-            positioning us as Uganda's premier integrated farming enterprise ready for global markets.
+            Under Mr. Fred's experienced management, our unified approach across multiple agricultural sectors creates
+            unprecedented value chains, positioning us as Uganda's premier integrated farming enterprise ready for
+            global markets.
           </p>
         </div>
 
