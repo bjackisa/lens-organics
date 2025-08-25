@@ -1,22 +1,9 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
-import localFont from "next/font/local"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Preloader } from "@/components/preloader"
 import "./globals.css"
-
-const segoeUI = localFont({
-  src: [
-    {
-      path: "../public/fonts/SegoeUIVF.woff2",
-      style: "normal",
-    },
-  ],
-  variable: "--font-segoe",
-  display: "swap",
-  fallback: ["system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"],
-})
 
 const inter = Inter({
   subsets: ["latin"],
@@ -38,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${segoeUI.variable} ${inter.variable} antialiased`} suppressHydrationWarning>
+    <html lang="en" className={`${inter.variable} antialiased`} suppressHydrationWarning>
       <body className="font-sans">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <Preloader />
