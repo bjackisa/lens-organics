@@ -9,7 +9,7 @@ export function ProcessingFacilities() {
       status: "Operational",
       location: "Bukeerere Facility",
       description: "Advanced steam distillation system for premium lemongrass essential oil extraction",
-      image: "https://res.cloudinary.com/dsijcu1om/image/upload/v1756205630/WhatsApp_Image_2025-08-25_at_4.06.29_PM_nkjvjj.jpg",
+      image: "https://res.cloudinary.com/dsijcu1om/image/upload/v1756205647/WhatsApp_Image_2025-08-25_at_4.04.29_PM_maaix6.jpg",
       capabilities: [
         "Steam distillation technology",
         "Stainless steel construction",

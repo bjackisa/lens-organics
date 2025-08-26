@@ -13,7 +13,7 @@ export function FarmLocations() {
       statusColor: "bg-emerald-500",
       description:
         "Our flagship facility featuring lemongrass cultivation and on-site essential oil distillation unit.",
-      image: "https://res.cloudinary.com/dsijcu1om/image/upload/v1756205631/WhatsApp_Image_2025-08-25_at_4.05.28_PM_pcbja5.jpg",
+      image: "https://res.cloudinary.com/dsijcu1om/image/upload/v1756214023/WhatsApp_Image_2025-08-20_at_6.32.13_PM_jr4lc1.jpg",
       operations: [
         "Lemongrass cultivation (primary)",
         "Steam distillation facility",
@@ -36,7 +36,7 @@ export function FarmLocations() {
       status: "Expanding Operations",
       statusColor: "bg-blue-500",
       description: "Strategic expansion site for tree crops and diversified agricultural operations.",
-      image: "https://res.cloudinary.com/dsijcu1om/image/upload/v1756205631/WhatsApp_Image_2025-08-25_at_4.05.26_PM_qydlve.jpg",
+      image: "https://res.cloudinary.com/dsijcu1om/image/upload/v1756205309/WhatsApp_Image_2025-08-25_at_5.26.23_PM_ur0wxk.jpg",
       operations: [
         "Hass avocado cultivation",
         "Macadamia nut production",
