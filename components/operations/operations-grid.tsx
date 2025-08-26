@@ -15,7 +15,8 @@ export function OperationsGrid() {
       statusColor: "bg-emerald-500",
       description:
         "Premium lemongrass cultivation with on-site steam distillation facility producing high-grade essential oils and hydrosols for export markets.",
-      image: "/images/lemongrass-field.png",
+      image: "https://res.cloudinary.com/dsijcu1om/image/upload/v1756205310/WhatsApp_Image_2025-08-25_at_5.23.14_PM_cvbyzc.jpg",
+      video: "https://res.cloudinary.com/dsijcu1om/video/upload/v1756205630/WhatsApp_Video_2025-08-25_at_4.06.31_PM_rgheun.mp4",
       keyMetrics: [
         "Steam distillation facility operational",
         "75-85% citral content achieved",
@@ -34,7 +35,7 @@ export function OperationsGrid() {
       statusColor: "bg-emerald-500",
       description:
         "High-yield plantain cultivation focusing on the popular Gonja variety for local and regional markets, supporting food security initiatives.",
-      image: "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=800&h=600&fit=crop&crop=center",
+      image: "https://res.cloudinary.com/dsijcu1om/image/upload/v1756205647/WhatsApp_Image_2025-08-21_at_5.45.22_AM_vygeu0.jpg",
       keyMetrics: [
         "Multiple harvest cycles annually",
         "Local market preference variety",
@@ -53,7 +54,7 @@ export function OperationsGrid() {
       statusColor: "bg-blue-500",
       description:
         "Hass avocado and macadamia cultivation targeting premium export markets with plans for value-added oil production.",
-      image: "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=800&h=600&fit=crop&crop=center",
+      image: "https://res.cloudinary.com/dsijcu1om/image/upload/v1756205631/WhatsApp_Image_2025-08-25_at_4.05.26_PM_1_gph0eo.jpg",
       keyMetrics: [
         "Hass avocado premium variety",
         "Macadamia high-value nuts",
@@ -72,7 +73,7 @@ export function OperationsGrid() {
       statusColor: "bg-emerald-500",
       description:
         "Modern poultry systems producing premium eggs with focus on organic feed integration and high welfare standards.",
-      image: "https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=800&h=600&fit=crop&crop=center",
+      image: "https://res.cloudinary.com/dsijcu1om/image/upload/v1756205647/WhatsApp_Image_2025-08-25_at_4.02.35_PM_cbijpc.jpg",
       keyMetrics: [
         "Modern housing systems",
         "Organic feed integration",
@@ -91,7 +92,8 @@ export function OperationsGrid() {
       statusColor: "bg-yellow-500",
       description:
         "Sustainable pond systems designed for premium catfish production targeting hospitality and retail sectors.",
-      image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=600&fit=crop&crop=center",
+      image: "https://res.cloudinary.com/dsijcu1om/image/upload/v1756205647/WhatsApp_Image_2025-08-25_at_4.04.29_PM_maaix6.jpg",
+      video: "https://res.cloudinary.com/dsijcu1om/video/upload/v1756205617/WhatsApp_Video_2025-08-25_at_4.21.55_PM_ggjume.mp4",
       keyMetrics: [
         "Pond infrastructure complete",
         "Sustainable water management",
@@ -110,7 +112,7 @@ export function OperationsGrid() {
       statusColor: "bg-orange-500",
       description:
         "Nutritious oat cultivation and processing targeting health-conscious consumer markets with functional food applications.",
-      image: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=800&h=600&fit=crop&crop=center",
+      image: "https://res.cloudinary.com/dsijcu1om/image/upload/v1756205615/WhatsApp_Image_2025-08-25_at_4.22.01_PM_lw5lnr.jpg",
       keyMetrics: [
         "Health food market focus",
         "Functional nutrition benefits",
@@ -140,11 +142,20 @@ export function OperationsGrid() {
               className="overflow-hidden glass-card hover:shadow-2xl transition-all duration-300 group"
             >
               <div className="aspect-video relative overflow-hidden">
-                <img
-                  src={operation.image || "/placeholder.svg"}
-                  alt={operation.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                />
+                {operation.video ? (
+                  <video
+                    className="w-full h-full object-cover video-js"
+                    controls
+                  >
+                    <source src={operation.video} type="video/mp4" />
+                  </video>
+                ) : (
+                  <img
+                    src={operation.image || "/placeholder.svg"}
+                    alt={operation.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 <div className="absolute top-4 left-4 flex flex-col gap-2">
                   <Badge className={`${operation.statusColor} text-white font-medium`}>{operation.status}</Badge>

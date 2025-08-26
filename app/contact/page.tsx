@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Badge } from "@/components/ui/badge"
 import { Phone, Mail, MapPin, Clock, Users, Building, Handshake } from "lucide-react"
+import { Navigation } from "@/components/navigation"
 
 export default function ContactPage() {
   const contactMethods = [
@@ -18,9 +19,9 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: "Email",
-      details: "info@lensorganics.ug",
+      details: "info@lensorganics.com",
       description: "For detailed inquiries and documentation",
-      action: "mailto:info@lensorganics.ug",
+      action: "mailto:info@lensorganics.com",
       actionText: "Send Email",
     },
     {
@@ -58,7 +59,8 @@ export default function ContactPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-muted/20 to-background">
+    <main className="min-h-screen bg-gradient-to-br from-background via-muted/20 to-background">
+      <Navigation />
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-r from-emerald-50 to-blue-50 dark:from-emerald-950 dark:to-blue-950">
         <div className="container mx-auto px-4">
@@ -96,7 +98,10 @@ export default function ContactPage() {
                     <div className="font-semibold text-lg mb-2">{method.details}</div>
                     <p className="text-sm text-muted-foreground">{method.description}</p>
                   </div>
-                  <Button asChild className="w-full glass-card hover:bg-emerald-600 hover:text-white">
+                  <Button
+                    asChild
+                    className="w-full glass-card text-emerald-600 hover:bg-emerald-600 hover:text-white"
+                  >
                     <a href={method.action}>{method.actionText}</a>
                   </Button>
                 </CardContent>
@@ -193,10 +198,19 @@ export default function ContactPage() {
                   </div>
 
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <Button type="submit" size="lg" className="flex-1 glass-card hover:bg-emerald-600 hover:text-white">
+                    <Button
+                      type="submit"
+                      size="lg"
+                      className="flex-1 glass-card text-emerald-600 hover:bg-emerald-600 hover:text-white"
+                    >
                       Send Message
                     </Button>
-                    <Button type="button" variant="outline" size="lg" className="glass-card bg-transparent">
+                    <Button
+                      type="button"
+                      variant="outline"
+                      size="lg"
+                      className="glass-card bg-transparent text-emerald-600 hover:bg-emerald-600 hover:text-white"
+                    >
                       <Phone className="mr-2 h-4 w-4" />
                       Call Instead
                     </Button>
@@ -255,6 +269,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-    </div>
+    </main>
   )
 }

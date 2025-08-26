@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Users, Target, Award, Calendar, Phone } from "lucide-react"
 import Link from "next/link"
+import { Navigation } from "@/components/navigation"
 
 export default function AboutPage() {
   const milestones = [
@@ -47,7 +48,8 @@ export default function AboutPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-muted/20 to-background">
+    <main className="min-h-screen bg-gradient-to-br from-background via-muted/20 to-background">
+      <Navigation />
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-r from-emerald-50 to-blue-50 dark:from-emerald-950 dark:to-blue-950">
         <div className="container mx-auto px-4">
@@ -63,10 +65,15 @@ export default function AboutPage() {
               processing, and sustainable value creation since 2023.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="glass-card hover:bg-emerald-600 hover:text-white">
+              <Button asChild size="lg" className="glass-card text-emerald-600 hover:bg-emerald-600 hover:text-white">
                 <Link href="/operations">Explore Our Operations</Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="glass-card bg-transparent">
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="glass-card bg-transparent text-emerald-600 hover:bg-emerald-600 hover:text-white"
+              >
                 <Link href="/contact">Wholesale Partnerships</Link>
               </Button>
             </div>
@@ -99,7 +106,7 @@ export default function AboutPage() {
             </div>
             <div className="glass-card p-8 rounded-2xl">
               <img
-                src="/images/lemongrass-field.png"
+                src="https://res.cloudinary.com/dsijcu1om/image/upload/v1756205310/WhatsApp_Image_2025-08-25_at_5.23.14_PM_cvbyzc.jpg"
                 alt="Lens Organics Farm"
                 className="w-full h-64 object-cover rounded-xl mb-6"
               />
@@ -205,40 +212,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Leadership */}
-      <section className="py-20 bg-gradient-to-br from-muted/20 via-background to-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="font-serif font-bold text-3xl md:text-4xl mb-6">Leadership Team</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Experienced professionals driving innovation and growth in Ugandan agriculture
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {leadership.map((leader, index) => (
-              <Card key={index} className="glass-card hover:shadow-xl transition-all duration-300 group">
-                <CardHeader>
-                  <div className="glass-card p-3 rounded-full w-fit mx-auto mb-4 group-hover:bg-emerald-100 dark:group-hover:bg-emerald-900 transition-colors">
-                    <Users className="h-6 w-6 text-emerald-500" />
-                  </div>
-                  <CardTitle className="text-xl text-center group-hover:text-emerald-600 transition-colors">
-                    {leader.role}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="text-center space-y-4">
-                  <p className="text-muted-foreground leading-relaxed">{leader.description}</p>
-                  <div className="glass-card p-3 rounded-lg">
-                    <h4 className="font-medium text-sm text-emerald-600 mb-2">Key Focus Areas</h4>
-                    <p className="text-xs text-muted-foreground">{leader.focus}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Contact CTA */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -249,10 +222,15 @@ export default function AboutPage() {
               discuss opportunities for collaboration.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="glass-card hover:bg-emerald-600 hover:text-white">
+              <Button asChild size="lg" className="glass-card text-emerald-600 hover:bg-emerald-600 hover:text-white">
                 <Link href="/contact">Get In Touch</Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="glass-card bg-transparent">
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="glass-card bg-transparent text-emerald-600 hover:bg-emerald-600 hover:text-white"
+              >
                 <Link href="tel:+256772614807">
                   <Phone className="mr-2 h-4 w-4" />
                   Call +256 772 614807
@@ -262,6 +240,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-    </div>
+    </main>
   )
 }

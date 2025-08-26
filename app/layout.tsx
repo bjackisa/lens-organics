@@ -3,6 +3,8 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Preloader } from "@/components/preloader"
+import { Footer } from "@/components/footer"
+import Script from "next/script"
 import "./globals.css"
 
 const inter = Inter({
@@ -26,11 +28,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} antialiased`} suppressHydrationWarning>
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://vjs.zencdn.net/8.10.0/video-js.css"
+        />
+      </head>
       <body className="font-sans">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <Preloader />
           {children}
+          <Footer />
         </ThemeProvider>
+        <Script src="https://vjs.zencdn.net/8.10.0/video.min.js" />
       </body>
     </html>
   )
