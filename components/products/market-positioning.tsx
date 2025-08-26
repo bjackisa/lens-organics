@@ -183,15 +183,15 @@ export function MarketPositioning() {
           </div>
         </div>
 
-        {/* Investment Opportunity */}
+        {/* Wholesale Opportunity */}
         <div className="glass-card p-10 rounded-2xl text-center bg-gradient-to-r from-emerald-50 to-blue-50 dark:from-emerald-950 dark:to-blue-950">
           <h3 className="font-serif font-bold text-2xl md:text-3xl mb-6 flex items-center justify-center">
             <DollarSign className="h-6 w-6 text-emerald-600 mr-3" />
-            Investment & Partnership Opportunity
+            Wholesale Partnership Opportunity
           </h3>
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto mb-8 leading-relaxed">
             With proven products, established quality systems, and clear market opportunities, Lens Organics is
-            positioned for significant growth. We're seeking strategic partners and investors to scale operations and
+            positioned for significant growth. We're seeking distributors and bulk buyers to scale operations and
             capture the full potential of our integrated agricultural enterprise.
           </p>
 
@@ -215,9 +215,9 @@ export function MarketPositioning() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-emerald-600 hover:bg-emerald-700">
-              <Link href="/investors">
+              <Link href="/contact">
                 <TrendingUp className="mr-2 h-4 w-4" />
-                Explore Investment Opportunities
+                Request Wholesale Info
               </Link>
             </Button>
             <Button

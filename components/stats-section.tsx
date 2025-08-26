@@ -37,7 +37,7 @@ export function StatsSection() {
       icon: Users,
       value: "B2B",
       label: "Focus",
-      description: "Clients & investors",
+      description: "Clients & partners",
     },
     {
       icon: Globe,

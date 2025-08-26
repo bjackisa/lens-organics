@@ -138,7 +138,7 @@ export function OperationsPreview() {
               size="lg"
               className="border-emerald-600 text-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-950 bg-transparent"
             >
-              <Link href="/investors">Investment Opportunities</Link>
+              <Link href="/contact">Wholesale Partnerships</Link>
             </Button>
           </div>
         </div>

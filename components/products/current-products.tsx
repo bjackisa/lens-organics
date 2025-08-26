@@ -190,17 +190,17 @@ export function CurrentProducts() {
 
         <div className="text-center mt-16">
           <div className="glass-card p-10 rounded-2xl max-w-4xl mx-auto">
-            <h3 className="font-serif font-bold text-2xl md:text-3xl mb-6">Ready for Scale & Partnership</h3>
+            <h3 className="font-serif font-bold text-2xl md:text-3xl mb-6">Ready for Bulk Orders</h3>
             <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
               Our current products demonstrate proven market demand, established quality standards, and scalable
-              production processes. We're ready to expand production capacity and develop strategic partnerships for
-              both local and international markets.
+              production processes. We're prepared to expand production capacity and fulfill wholesale orders for both
+              local and international markets.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-emerald-600 hover:bg-emerald-700">
-                <Link href="/investors">
+                <Link href="/contact">
                   <TrendingUp className="mr-2 h-4 w-4" />
-                  Investment Opportunities
+                  Request Wholesale Info
                 </Link>
               </Button>
               <Button

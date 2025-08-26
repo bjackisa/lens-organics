@@ -29,7 +29,6 @@ export function Navigation() {
         { href: "/quality", label: "Quality Standards" },
       ],
     },
-    { href: "/investors", label: "Investors" },
     { href: "/contact", label: "Contact" },
   ]
 
