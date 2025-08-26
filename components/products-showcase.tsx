@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Droplets, Leaf, Shield, Sparkles, Beaker, Award, TrendingUp, Globe } from "lucide-react"
+import { Droplets, Leaf, Shield, Sparkles, Beaker, Award, Globe, TrendingUp } from "lucide-react"
 import Link from "next/link"
 
 export function ProductsShowcase() {
@@ -209,7 +209,7 @@ export function ProductsShowcase() {
             </h3>
             <p className="text-muted-foreground mb-6 text-lg max-w-3xl mx-auto leading-relaxed">
               Our products are developed following UNBS protocols, ensuring that when you partner with us, you're
-              investing in products that can achieve full certification and meet international export standards.
+              sourcing products that can achieve full certification and meet international export standards.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <Badge className="bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200">
@@ -229,25 +229,14 @@ export function ProductsShowcase() {
         </div>
 
         <div className="text-center">
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-emerald-600 hover:bg-emerald-700">
-              <Link href="/products">
-                <Sparkles className="mr-2 h-4 w-4" />
-                View Complete Product Catalog
-              </Link>
-            </Button>
-            <Button
-              asChild
-              variant="outline"
-              size="lg"
-              className="border-emerald-600 text-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-950 bg-transparent"
-            >
-              <Link href="/investors">
-                <TrendingUp className="mr-2 h-4 w-4" />
-                Investment Opportunities
-              </Link>
-            </Button>
-          </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild size="lg" className="bg-emerald-600 hover:bg-emerald-700">
+                <Link href="/products">
+                  <Sparkles className="mr-2 h-4 w-4" />
+                  View Complete Product Catalog
+                </Link>
+              </Button>
+            </div>
         </div>
       </div>
     </section>

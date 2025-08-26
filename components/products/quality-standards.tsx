@@ -181,9 +181,9 @@ export function QualityStandards() {
         <div className="glass-card p-10 rounded-2xl text-center bg-gradient-to-r from-emerald-50 to-blue-50 dark:from-emerald-950 dark:to-blue-950">
           <h3 className="font-serif font-bold text-2xl md:text-3xl mb-6">Quality-Driven Partnership Opportunities</h3>
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto mb-8 leading-relaxed">
-            When you partner with Lens Organics, you're not just investing in products—you're investing in a
-            quality-first approach that ensures market readiness, regulatory compliance, and premium positioning for
-            sustainable business growth.
+            When you partner with Lens Organics, you're not just buying products—you're embracing a quality-first
+            approach that ensures market readiness, regulatory compliance, and premium positioning for sustainable
+            business growth.
           </p>
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <div className="glass-card p-6 rounded-xl">

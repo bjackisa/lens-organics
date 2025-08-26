@@ -36,8 +36,8 @@ export default function ContactPage() {
   const inquiryTypes = [
     {
       icon: Users,
-      title: "Investment Opportunities",
-      description: "Explore partnership and investment options",
+      title: "Wholesale Orders",
+      description: "Bulk purchasing for retailers and distributors",
       badge: "High Priority",
       badgeColor: "bg-emerald-500",
     },
@@ -70,8 +70,8 @@ export default function ContactPage() {
               Contact Lens Organics
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed mb-8">
-              Ready to explore opportunities in premium Ugandan agriculture? We're here to discuss investments,
-              partnerships, and product procurement.
+              Ready to explore opportunities in premium Ugandan agriculture? We're here to discuss wholesale partnerships
+              and product procurement.
             </p>
           </div>
         </div>
@@ -177,7 +177,7 @@ export default function ContactPage() {
                     <label className="text-sm font-medium">Inquiry Type *</label>
                     <select className="w-full p-3 glass-card rounded-md border border-input bg-background">
                       <option value="">Select inquiry type</option>
-                      <option value="investment">Investment Opportunities</option>
+                      <option value="wholesale">Wholesale Partnership</option>
                       <option value="partnership">Business Partnership</option>
                       <option value="procurement">Product Procurement</option>
                       <option value="general">General Inquiry</option>

@@ -42,7 +42,7 @@ export function HeroSection() {
               size="lg"
               className="text-lg px-8 py-6 glass-card border-white/30 text-white hover:bg-white/20 bg-transparent font-medium"
             >
-              <Link href="/investors">Partnership Opportunities</Link>
+              <Link href="/contact">Wholesale Partnerships</Link>
             </Button>
           </div>
         </div>

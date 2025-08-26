@@ -32,7 +32,7 @@ export default function AboutPage() {
     {
       role: "Founder & CEO",
       description: "Visionary leader with deep agricultural expertise and business acumen",
-      focus: "Strategic direction, investor relations, market expansion",
+      focus: "Strategic direction, B2B relations, market expansion",
     },
     {
       role: "Operations Director",
@@ -67,7 +67,7 @@ export default function AboutPage() {
                 <Link href="/operations">Explore Our Operations</Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="glass-card bg-transparent">
-                <Link href="/investors">Investment Opportunities</Link>
+                <Link href="/contact">Wholesale Partnerships</Link>
               </Button>
             </div>
           </div>
@@ -156,7 +156,7 @@ export default function AboutPage() {
               <CardContent>
                 <p className="text-lg leading-relaxed">
                   To become East Africa's leading integrated agricultural enterprise, recognized for innovation in
-                  sustainable farming, premium product development, and creating lasting value for investors,
+                  sustainable farming, premium product development, and creating lasting value for partners,
                   communities, and the global marketplace.
                 </p>
               </CardContent>
@@ -245,8 +245,8 @@ export default function AboutPage() {
           <div className="glass-card p-12 rounded-2xl text-center bg-gradient-to-r from-emerald-50 to-blue-50 dark:from-emerald-950 dark:to-blue-950">
             <h2 className="font-serif font-bold text-3xl md:text-4xl mb-6">Ready to Partner With Us?</h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Join us in transforming Ugandan agriculture. Whether you're an investor, partner, or customer, we'd love
-              to discuss opportunities for collaboration.
+              Join us in transforming Ugandan agriculture. Whether you're a business partner or customer, we'd love to
+              discuss opportunities for collaboration.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="glass-card hover:bg-emerald-600 hover:text-white">
