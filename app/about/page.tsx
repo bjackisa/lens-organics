@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Users, Target, Award, Calendar, Phone } from "lucide-react"
+import { Target, Award, Calendar, Phone } from "lucide-react"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 
@@ -26,24 +26,6 @@ export default function AboutPage() {
       year: "2025",
       title: "Value Addition",
       description: "Premium lemon grass oil production, UNBS protocol compliance, export readiness",
-    },
-  ]
-
-  const leadership = [
-    {
-      role: "Founder & CEO",
-      description: "Visionary leader with deep agricultural expertise and business acumen",
-      focus: "Strategic direction, B2B relations, market expansion",
-    },
-    {
-      role: "Operations Director",
-      description: "Experienced agricultural operations manager overseeing all farm activities",
-      focus: "Production optimization, quality control, supply chain management",
-    },
-    {
-      role: "Technical Manager",
-      description: "Specialist in value-added processing and product development",
-      focus: "Processing innovation, quality standards, technical compliance",
     },
   ]
 
