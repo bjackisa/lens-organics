@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Droplets, Leaf, Shield, Sparkles, Beaker, Award, Globe } from "lucide-react"
+import { Droplets, Leaf, Shield, Sparkles, Beaker, Award, Globe, TrendingUp } from "lucide-react"
 import Link from "next/link"
 
 export function ProductsShowcase() {
