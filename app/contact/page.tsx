@@ -18,9 +18,9 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: "Email",
-      details: "info@lensorganics.ug",
+      details: "info@lensorganics.com",
       description: "For detailed inquiries and documentation",
-      action: "mailto:info@lensorganics.ug",
+      action: "mailto:info@lensorganics.com",
       actionText: "Send Email",
     },
     {

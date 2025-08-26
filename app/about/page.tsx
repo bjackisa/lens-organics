@@ -99,7 +99,7 @@ export default function AboutPage() {
             </div>
             <div className="glass-card p-8 rounded-2xl">
               <img
-                src="/images/lemongrass-field.png"
+                src="https://res.cloudinary.com/dsijcu1om/image/upload/v1756205310/WhatsApp_Image_2025-08-25_at_5.23.14_PM_cvbyzc.jpg"
                 alt="Lens Organics Farm"
                 className="w-full h-64 object-cover rounded-xl mb-6"
               />
@@ -201,40 +201,6 @@ export default function AboutPage() {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Leadership */}
-      <section className="py-20 bg-gradient-to-br from-muted/20 via-background to-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="font-serif font-bold text-3xl md:text-4xl mb-6">Leadership Team</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Experienced professionals driving innovation and growth in Ugandan agriculture
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {leadership.map((leader, index) => (
-              <Card key={index} className="glass-card hover:shadow-xl transition-all duration-300 group">
-                <CardHeader>
-                  <div className="glass-card p-3 rounded-full w-fit mx-auto mb-4 group-hover:bg-emerald-100 dark:group-hover:bg-emerald-900 transition-colors">
-                    <Users className="h-6 w-6 text-emerald-500" />
-                  </div>
-                  <CardTitle className="text-xl text-center group-hover:text-emerald-600 transition-colors">
-                    {leader.role}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="text-center space-y-4">
-                  <p className="text-muted-foreground leading-relaxed">{leader.description}</p>
-                  <div className="glass-card p-3 rounded-lg">
-                    <h4 className="font-medium text-sm text-emerald-600 mb-2">Key Focus Areas</h4>
-                    <p className="text-xs text-muted-foreground">{leader.focus}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
           </div>
         </div>
       </section>

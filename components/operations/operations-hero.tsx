@@ -9,7 +9,7 @@ export function OperationsHero() {
     <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/lemongrass-field.png"
+          src="https://res.cloudinary.com/dsijcu1om/image/upload/v1756205647/WhatsApp_Image_2025-08-25_at_3.59.40_PM_v9axnk.jpg"
           alt="Lens Organics integrated farming operations"
           className="w-full h-full object-cover"
         />

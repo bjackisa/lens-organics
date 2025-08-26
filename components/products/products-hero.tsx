@@ -9,7 +9,7 @@ export function ProductsHero() {
     <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/distillation-setup.png"
+          src="https://res.cloudinary.com/dsijcu1om/image/upload/v1756205310/WhatsApp_Image_2025-08-25_at_5.26.13_PM_us3bb9.jpg"
           alt="Lens Organics premium product processing"
           className="w-full h-full object-cover"
         />
