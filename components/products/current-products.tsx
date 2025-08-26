@@ -13,7 +13,7 @@ export function CurrentProducts() {
       statusColor: "bg-emerald-500",
       description:
         "Pure essential oil extracted through advanced steam distillation, containing 75-85% citral with rich geraniol compounds for premium applications.",
-      image: "https://res.cloudinary.com/dsijcu1om/image/upload/v1756205306/WhatsApp_Image_2025-08-25_at_5.26.47_PM_u61iku.jpg",
+      image: "https://res.cloudinary.com/dsijcu1om/image/upload/v1756205309/WhatsApp_Image_2025-08-25_at_5.26.38_PM_exhtlk.jpg",
       technicalSpecs: {
         composition: "Citral 75-85%, Geraniol 8-12%, Limonene 2-5%, Myrcene 1-3%",
         extractionMethod: "Steam distillation at controlled temperature",
