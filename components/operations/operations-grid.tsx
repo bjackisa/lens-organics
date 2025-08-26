@@ -15,7 +15,7 @@ export function OperationsGrid() {
       statusColor: "bg-emerald-500",
       description:
         "Premium lemongrass cultivation with on-site steam distillation facility producing high-grade essential oils and hydrosols for export markets.",
-      image: "https://res.cloudinary.com/dsijcu1om/image/upload/v1756205310/WhatsApp_Image_2025-08-25_at_5.23.14_PM_cvbyzc.jpg",
+      image: "https://res.cloudinary.com/dsijcu1om/image/upload/v1756205647/WhatsApp_Image_2025-08-21_at_5.45.22_AM_1_s66b5e.jpg",
       video: "https://res.cloudinary.com/dsijcu1om/video/upload/v1756205630/WhatsApp_Video_2025-08-25_at_4.06.31_PM_rgheun.mp4",
       keyMetrics: [
         "Steam distillation facility operational",
@@ -54,7 +54,7 @@ export function OperationsGrid() {
       statusColor: "bg-blue-500",
       description:
         "Hass avocado and macadamia cultivation targeting premium export markets with plans for value-added oil production.",
-      image: "https://res.cloudinary.com/dsijcu1om/image/upload/v1756205631/WhatsApp_Image_2025-08-25_at_4.05.26_PM_1_gph0eo.jpg",
+      image: "https://res.cloudinary.com/dsijcu1om/image/upload/v1756205647/WhatsApp_Image_2025-08-25_at_4.04.27_PM_fyh3a8.jpg",
       keyMetrics: [
         "Hass avocado premium variety",
         "Macadamia high-value nuts",
@@ -112,7 +112,7 @@ export function OperationsGrid() {
       statusColor: "bg-orange-500",
       description:
         "Nutritious oat cultivation and processing targeting health-conscious consumer markets with functional food applications.",
-      image: "https://res.cloudinary.com/dsijcu1om/image/upload/v1756205615/WhatsApp_Image_2025-08-25_at_4.22.01_PM_lw5lnr.jpg",
+      image: "https://res.cloudinary.com/dsijcu1om/image/upload/v1756205621/WhatsApp_Image_2025-08-25_at_4.22.19_PM_jvqapp.jpg",
       keyMetrics: [
         "Health food market focus",
         "Functional nutrition benefits",
