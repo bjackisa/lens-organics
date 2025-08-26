@@ -85,7 +85,7 @@ export function Navigation() {
             <ThemeToggle />
             <Button
               asChild
-              className="hidden md:flex glass-card hover:bg-emerald-600 hover:text-white transition-all duration-300"
+              className="hidden md:flex glass-card text-emerald-600 hover:bg-emerald-600 hover:text-white transition-all duration-300"
             >
               <Link href="tel:+256772614807">
                 <Phone className="mr-2 h-4 w-4" />
@@ -132,7 +132,7 @@ export function Navigation() {
                       </Link>
                     ),
                   )}
-                  <Button asChild className="mt-6 glass-card hover:bg-emerald-600 hover:text-white">
+                  <Button asChild className="mt-6 glass-card text-emerald-600 hover:bg-emerald-600 hover:text-white">
                     <Link href="tel:+256772614807">
                       <Phone className="mr-2 h-4 w-4" />
                       +256 772 614807

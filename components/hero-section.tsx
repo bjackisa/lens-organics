@@ -8,7 +8,7 @@ export function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/lemongrass-plantation.png"
+          src="https://res.cloudinary.com/dsijcu1om/image/upload/v1756205309/WhatsApp_Image_2025-08-25_at_5.26.23_PM_ur0wxk.jpg"
           alt="Integrated farming operations at Lens Organics"
           className="w-full h-full object-cover"
         />
