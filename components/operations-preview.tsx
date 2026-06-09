@@ -1,9 +1,13 @@
+'use client'
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Sprout, Fish, Egg, TreePine, Wheat, Apple } from "lucide-react"
+import { Sprout, Fish, Egg, TreePine, Wheat, Apple, ArrowRight } from "lucide-react"
 import Link from "next/link"
+import { useScrollAnimation } from "@/hooks/useParallax"
 
 export function OperationsPreview() {
+  const { elementRef, isVisible } = useScrollAnimation()
   const operations = [
     {
       icon: Sprout,
@@ -58,13 +62,19 @@ export function OperationsPreview() {
   ]
 
   return (
-    <section className="py-20 bg-gradient-to-br from-background via-muted/10 to-background">
-      <div className="container mx-auto px-4">
+    <section ref={elementRef} className="py-20 bg-gradient-to-br from-background via-muted/10 to-background relative overflow-hidden">
+      {/* Background animations */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 right-0 w-96 h-96 rounded-full bg-blue-500/5 blur-3xl" />
+        <div className="absolute bottom-1/4 left-0 w-80 h-80 rounded-full bg-emerald-500/5 blur-3xl" />
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="font-serif font-bold text-3xl md:text-5xl mb-6 bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">
+          <h2 className={`font-serif font-bold text-3xl md:text-5xl mb-6 bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent transition-all duration-700 ${isVisible ? 'animate-float-up' : 'opacity-0'}`}>
             Integrated Agricultural Ecosystem
           </h2>
-          <p className="text-muted-foreground text-lg md:text-xl max-w-4xl mx-auto leading-relaxed">
+          <p className={`text-muted-foreground text-lg md:text-xl max-w-4xl mx-auto leading-relaxed transition-all duration-700 ${isVisible ? 'animate-float-up' : 'opacity-0'}`} style={{ animationDelay: '0.1s' }}>
             Our diversified operations create powerful synergies across multiple agricultural sectors. Each enterprise
             complements the others, maximizing resource efficiency while building resilient revenue streams that
             position us for sustainable growth and international expansion.
@@ -75,38 +85,40 @@ export function OperationsPreview() {
           {operations.map((operation, index) => (
             <Card
               key={index}
-              className="overflow-hidden hover:shadow-xl transition-all duration-300 glass-card group hover:scale-105"
+              className={`overflow-hidden hover:shadow-2xl transition-all duration-500 glass-card group hover:scale-105 ${isVisible ? 'animate-float-up' : 'opacity-0 translate-y-8'}`}
+              style={{ animationDelay: isVisible ? `${0.06 * (index + 1)}s` : undefined }}
             >
-              <div className="aspect-video relative overflow-hidden">
+              <div className="aspect-video relative overflow-hidden bg-gray-700">
                 <img
                   src={operation.image || "/placeholder.svg"}
                   alt={operation.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  className="w-full h-full object-cover group-hover:scale-125 transition-transform duration-500"
+                  loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                <div className="absolute top-3 right-3">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute top-3 right-3 transform transition-transform duration-300 group-hover:scale-110">
                   <span
-                    className={`text-xs px-3 py-1 rounded-full font-medium ${
+                    className={`text-xs px-3 py-1 rounded-full font-medium backdrop-blur-sm ${
                       operation.status === "Active Production"
-                        ? "bg-emerald-500 text-white"
+                        ? "bg-emerald-500/90 text-white"
                         : operation.status === "Expanding"
-                          ? "bg-blue-500 text-white"
+                          ? "bg-blue-500/90 text-white"
                           : operation.status === "Infrastructure Ready"
-                            ? "bg-yellow-500 text-white"
-                            : "bg-orange-500 text-white"
+                            ? "bg-yellow-500/90 text-white"
+                            : "bg-orange-500/90 text-white"
                     }`}
                   >
                     {operation.status}
                   </span>
                 </div>
-                <div className="absolute bottom-3 left-3 text-white">
+                <div className="absolute bottom-3 left-3 text-white transform transition-transform duration-300 group-hover:translate-y-2">
                   <p className="text-xs font-medium opacity-90">{operation.location}</p>
                 </div>
               </div>
               <CardHeader className="pb-3">
                 <CardTitle className="flex items-center text-lg group-hover:text-emerald-600 transition-colors">
-                  <div className="glass-card p-2 rounded-lg mr-3 group-hover:bg-emerald-100 dark:group-hover:bg-emerald-900 transition-colors">
-                    <operation.icon className="h-5 w-5 text-primary group-hover:text-emerald-600 transition-colors" />
+                  <div className="glass-card p-2 rounded-lg mr-3 group-hover:bg-emerald-100 dark:group-hover:bg-emerald-900/30 transition-all duration-300 transform group-hover:scale-110">
+                    <operation.icon className="h-5 w-5 text-emerald-600 group-hover:text-emerald-700 transition-colors" />
                   </div>
                   {operation.title}
                 </CardTitle>
@@ -118,9 +130,9 @@ export function OperationsPreview() {
           ))}
         </div>
 
-        <div className="text-center">
-          <div className="glass-card p-8 rounded-2xl max-w-3xl mx-auto mb-8">
-            <h3 className="font-serif font-bold text-2xl md:text-3xl mb-4">Unified Management, Multiplied Results</h3>
+        <div className={`text-center transition-all duration-700 ${isVisible ? 'animate-float-up' : 'opacity-0'}`} style={{ animationDelay: '0.4s' }}>
+          <div className="glass-card-enhanced p-8 rounded-2xl max-w-3xl mx-auto mb-8 group hover:shadow-2xl transition-all duration-300">
+            <h3 className="font-serif font-bold text-2xl md:text-3xl mb-4 group-hover:text-emerald-600 transition-colors">Unified Management, Multiplied Results</h3>
             <p className="text-muted-foreground mb-6 text-lg leading-relaxed">
               Our integrated approach doesn't just diversify risk—it creates powerful cross-sector synergies. Organic
               waste becomes fertilizer, processing byproducts feed livestock, and shared infrastructure maximizes
@@ -129,14 +141,18 @@ export function OperationsPreview() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-emerald-600 hover:bg-emerald-700">
-              <Link href="/operations">Explore All Operations</Link>
+            <Button asChild size="lg" className="bg-emerald-600 hover:bg-emerald-700 group/btn relative overflow-hidden">
+              <Link href="/operations" className="flex items-center">
+                <span className="relative z-10">Explore All Operations</span>
+                <ArrowRight className="ml-2 h-5 w-5 relative z-10 transition-transform group-hover/btn:translate-x-1" />
+                <div className="absolute inset-0 bg-emerald-500 transform -translate-x-full group-hover/btn:translate-x-0 transition-transform duration-300 z-0" />
+              </Link>
             </Button>
             <Button
               asChild
               variant="outline"
               size="lg"
-              className="border-emerald-600 text-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-950 bg-transparent"
+              className="border-emerald-600 text-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-950 bg-transparent group/btn transform hover:scale-105 transition-transform"
             >
               <Link href="/contact">Wholesale Partnerships</Link>
             </Button>

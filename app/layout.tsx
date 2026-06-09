@@ -2,6 +2,7 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
+import { ScrollProvider } from "@/components/scroll-provider"
 import { Preloader } from "@/components/preloader"
 import { Footer } from "@/components/footer"
 import "./globals.css"
@@ -26,12 +27,14 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} antialiased`} suppressHydrationWarning>
+    <html lang="en" className={`${inter.variable} antialiased bg-background`} suppressHydrationWarning>
       <body className="font-sans">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
-          <Preloader />
-          {children}
-          <Footer />
+          <ScrollProvider>
+            <Preloader />
+            {children}
+            <Footer />
+          </ScrollProvider>
         </ThemeProvider>
       </body>
     </html>

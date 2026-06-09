@@ -1,10 +1,14 @@
+'use client'
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Droplets, Leaf, Shield, Sparkles, Beaker, Award, Globe, TrendingUp } from "lucide-react"
+import { Droplets, Leaf, Shield, Sparkles, Beaker, Award, Globe, TrendingUp, ArrowRight } from "lucide-react"
 import Link from "next/link"
+import { useScrollAnimation } from "@/hooks/useParallax"
 
 export function ProductsShowcase() {
+  const { elementRef, isVisible } = useScrollAnimation()
   const products = [
     {
       name: "Premium Lemongrass Essential Oil",
@@ -84,13 +88,19 @@ export function ProductsShowcase() {
   ]
 
   return (
-    <section className="py-20 bg-gradient-to-br from-muted/20 via-background to-muted/30">
-      <div className="container mx-auto px-4">
+    <section ref={elementRef} className="py-20 bg-gradient-to-br from-muted/20 via-background to-muted/30 relative overflow-hidden">
+      {/* Background animations */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/3 left-1/4 w-96 h-96 rounded-full bg-emerald-500/5 blur-3xl" />
+        <div className="absolute bottom-1/3 right-1/4 w-80 h-80 rounded-full bg-blue-500/5 blur-3xl" />
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="font-serif font-bold text-3xl md:text-5xl mb-6 bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">
+          <h2 className={`font-serif font-bold text-3xl md:text-5xl mb-6 bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent transition-all duration-700 ${isVisible ? 'animate-float-up' : 'opacity-0'}`}>
             Premium Value-Added Products
           </h2>
-          <p className="text-muted-foreground text-lg md:text-xl max-w-4xl mx-auto leading-relaxed">
+          <p className={`text-muted-foreground text-lg md:text-xl max-w-4xl mx-auto leading-relaxed transition-all duration-700 ${isVisible ? 'animate-float-up' : 'opacity-0'}`} style={{ animationDelay: '0.1s' }}>
             We don't just grow—we transform. Our advanced processing capabilities convert raw agricultural materials
             into premium products that meet international quality standards and command premium market prices.
           </p>
@@ -99,23 +109,24 @@ export function ProductsShowcase() {
         {/* Current Products */}
         <div className="grid lg:grid-cols-2 gap-10 mb-16">
           {products.map((product, index) => (
-            <Card key={index} className="overflow-hidden glass-card hover:shadow-2xl transition-all duration-300 group">
-              <div className="aspect-video relative overflow-hidden">
+            <Card key={index} className={`overflow-hidden glass-card hover:shadow-2xl transition-all duration-500 group ${isVisible ? 'animate-float-up' : 'opacity-0 translate-y-8'}`} style={{ animationDelay: isVisible ? `${0.1 * (index + 1)}s` : undefined }}>
+              <div className="aspect-video relative overflow-hidden bg-gray-700">
                 <img
                   src={product.image || "/placeholder.svg"}
                   alt={product.name}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  className="w-full h-full object-cover group-hover:scale-125 transition-transform duration-500"
+                  loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                <div className="absolute top-4 left-4 flex flex-col gap-2">
-                  <Badge className="bg-emerald-500 text-white font-medium">{product.status}</Badge>
-                  <Badge variant="outline" className="bg-white/95 text-emerald-700 border-emerald-200">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute top-4 left-4 flex flex-col gap-2 transform transition-transform duration-300 group-hover:translate-y-1">
+                  <Badge className="bg-emerald-500/95 text-white font-medium backdrop-blur-sm">{product.status}</Badge>
+                  <Badge variant="outline" className="bg-white/95 text-emerald-700 border-emerald-200 backdrop-blur-sm">
                     <Award className="w-3 h-3 mr-1" />
                     {product.compliance}
                   </Badge>
                 </div>
-                <div className="absolute top-4 right-4">
-                  <Badge className="bg-blue-500 text-white">
+                <div className="absolute top-4 right-4 transform transition-transform duration-300 group-hover:scale-110">
+                  <Badge className="bg-blue-500/95 text-white backdrop-blur-sm">
                     <Globe className="w-3 h-3 mr-1" />
                     {product.marketValue}
                   </Badge>
@@ -124,8 +135,8 @@ export function ProductsShowcase() {
 
               <CardHeader className="pb-4">
                 <CardTitle className="flex items-center text-xl group-hover:text-emerald-600 transition-colors">
-                  <div className="glass-card p-2 rounded-lg mr-3 group-hover:bg-emerald-100 dark:group-hover:bg-emerald-900 transition-colors">
-                    <Droplets className="h-5 w-5 text-primary group-hover:text-emerald-600 transition-colors" />
+                  <div className="glass-card p-2 rounded-lg mr-3 group-hover:bg-emerald-100 dark:group-hover:bg-emerald-900/30 transition-all duration-300 transform group-hover:scale-110">
+                    <Droplets className="h-5 w-5 text-emerald-600 group-hover:text-emerald-700 transition-colors" />
                   </div>
                   {product.name}
                 </CardTitle>
@@ -133,7 +144,7 @@ export function ProductsShowcase() {
               </CardHeader>
 
               <CardContent className="space-y-6">
-                <div className="glass-card p-4 rounded-lg">
+                <div className="glass-card-enhanced p-4 rounded-lg group-hover:bg-emerald-100/50 dark:group-hover:bg-emerald-900/20 transition-colors duration-300">
                   <h4 className="font-semibold flex items-center mb-2 text-emerald-600">
                     <Beaker className="h-4 w-4 mr-2" />
                     Technical Composition
@@ -148,7 +159,7 @@ export function ProductsShowcase() {
                   </h4>
                   <ul className="grid grid-cols-1 gap-2 text-sm">
                     {product.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-start">
+                      <li key={idx} className="flex items-start hover:translate-x-1 transition-transform duration-200">
                         <Shield className="h-3 w-3 text-emerald-500 mr-2 flex-shrink-0 mt-0.5" />
                         <span className="leading-relaxed">{benefit}</span>
                       </li>
@@ -160,10 +171,10 @@ export function ProductsShowcase() {
           ))}
         </div>
 
-        <div className="glass-card p-10 rounded-2xl mb-12">
+        <div className={`glass-card-enhanced p-10 rounded-2xl mb-12 transition-all duration-700 ${isVisible ? 'animate-float-up' : 'opacity-0'}`} style={{ animationDelay: '0.2s' }}>
           <div className="text-center mb-10">
-            <h3 className="font-serif font-bold text-2xl md:text-3xl mb-4 flex items-center justify-center">
-              <TrendingUp className="h-6 w-6 text-emerald-600 mr-3" />
+            <h3 className="font-serif font-bold text-2xl md:text-3xl mb-4 flex items-center justify-center group">
+              <TrendingUp className="h-6 w-6 text-emerald-600 mr-3 group-hover:rotate-12 transition-transform duration-300" />
               Product Development Pipeline
             </h3>
             <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
@@ -176,16 +187,17 @@ export function ProductsShowcase() {
             {upcomingProducts.map((product, index) => (
               <div
                 key={index}
-                className="glass-card p-6 rounded-xl hover:shadow-lg transition-all duration-300 group hover:scale-105"
+                className={`glass-card p-6 rounded-xl hover:shadow-xl transition-all duration-300 group hover:scale-105 ${isVisible ? 'animate-float-up' : 'opacity-0'}`}
+                style={{ animationDelay: isVisible ? `${0.02 * (index + 1)}s` : undefined }}
               >
                 <div className="flex items-center justify-between mb-3">
-                  <Leaf className="h-6 w-6 text-emerald-500 group-hover:text-emerald-600 transition-colors" />
+                  <Leaf className="h-6 w-6 text-emerald-500 group-hover:text-emerald-600 group-hover:rotate-12 transition-all duration-300" />
                   <Badge
                     variant="outline"
-                    className={`text-xs ${
+                    className={`text-xs transition-all duration-300 ${
                       product.timeline === "Active"
-                        ? "border-emerald-500 text-emerald-600"
-                        : "border-blue-500 text-blue-600"
+                        ? "border-emerald-500 text-emerald-600 bg-emerald-50 dark:bg-emerald-950/30"
+                        : "border-blue-500 text-blue-600 bg-blue-50 dark:bg-blue-950/30"
                     }`}
                   >
                     {product.timeline}
@@ -201,10 +213,10 @@ export function ProductsShowcase() {
           </div>
         </div>
 
-        <div className="glass-card p-8 rounded-2xl mb-12 bg-gradient-to-r from-emerald-50 to-blue-50 dark:from-emerald-950 dark:to-blue-950">
+        <div className={`glass-card-enhanced p-8 rounded-2xl mb-12 bg-gradient-to-r from-emerald-50/50 to-blue-50/50 dark:from-emerald-950/30 dark:to-blue-950/30 transition-all duration-700 ${isVisible ? 'animate-float-up' : 'opacity-0'}`} style={{ animationDelay: '0.3s' }}>
           <div className="text-center">
-            <h3 className="font-serif font-bold text-2xl md:text-3xl mb-4 flex items-center justify-center">
-              <Award className="h-6 w-6 text-emerald-600 mr-3" />
+            <h3 className="font-serif font-bold text-2xl md:text-3xl mb-4 flex items-center justify-center group">
+              <Award className="h-6 w-6 text-emerald-600 mr-3 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" />
               Quality Assurance & Standards
             </h3>
             <p className="text-muted-foreground mb-6 text-lg max-w-3xl mx-auto leading-relaxed">
@@ -212,28 +224,31 @@ export function ProductsShowcase() {
               sourcing products that can achieve full certification and meet international export standards.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm">
-              <Badge className="bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200">
+              <Badge className="bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200 hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-default">
                 ISO Quality Standards
               </Badge>
-              <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
+              <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-default">
                 Export Documentation Ready
               </Badge>
-              <Badge className="bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200">
+              <Badge className="bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-default">
                 Traceability Systems
               </Badge>
-              <Badge className="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200">
+              <Badge className="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-default">
                 GMP Compliant Processing
               </Badge>
             </div>
           </div>
         </div>
 
-        <div className="text-center">
+        <div className={`text-center transition-all duration-700 ${isVisible ? 'animate-float-up' : 'opacity-0'}`} style={{ animationDelay: '0.4s' }}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-emerald-600 hover:bg-emerald-700">
-                <Link href="/products">
-                  <Sparkles className="mr-2 h-4 w-4" />
-                  View Complete Product Catalog
+              <Button asChild size="lg" className="bg-emerald-600 hover:bg-emerald-700 group/btn relative overflow-hidden">
+                <Link href="/products" className="flex items-center">
+                  <span className="relative z-10">
+                    <Sparkles className="mr-2 h-4 w-4 inline transition-transform group-hover/btn:rotate-180 duration-300" />
+                    View Complete Product Catalog
+                  </span>
+                  <div className="absolute inset-0 bg-emerald-500 transform -translate-x-full group-hover/btn:translate-x-0 transition-transform duration-300 z-0" />
                 </Link>
               </Button>
             </div>
