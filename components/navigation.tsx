@@ -105,7 +105,7 @@ export function Navigation() {
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild className="md:hidden">
                 <Button variant="ghost" size="icon" className="hover:bg-emerald-100 dark:hover:bg-emerald-900 transition-all duration-300 transform hover:scale-110">
-                  <Menu className="h-5 w-5 transition-transform duration-300" style={{ transform: isOpen ? 'rotate(90deg)' : 'rotate(0deg)' }} />
+                  <Menu className="h-5 w-5 transition-transform duration-300" />
                 </Button>
               </SheetTrigger>
               <SheetContent side="right" className="w-[300px] sm:w-[400px] glass-card-enhanced backdrop-blur-xl animate-in slide-in-from-right duration-300">
