@@ -5,10 +5,8 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Droplets, Leaf, Shield, Sparkles, Beaker, Award, Globe, TrendingUp, ArrowRight } from "lucide-react"
 import Link from "next/link"
-import { useScrollAnimation } from "@/hooks/useParallax"
 
 export function ProductsShowcase() {
-  const { elementRef, isVisible } = useScrollAnimation()
   const products = [
     {
       name: "Premium Lemongrass Essential Oil",
@@ -88,7 +86,7 @@ export function ProductsShowcase() {
   ]
 
   return (
-    <section ref={elementRef} className="py-20 bg-gradient-to-br from-muted/20 via-background to-muted/30 relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-muted/20 via-background to-muted/30 relative overflow-hidden">
       {/* Background animations */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/3 left-1/4 w-96 h-96 rounded-full bg-emerald-500/5 blur-3xl" />
@@ -96,11 +94,11 @@ export function ProductsShowcase() {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className={`font-serif font-bold text-3xl md:text-5xl mb-6 bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent transition-all duration-700 ${isVisible ? 'animate-float-up' : 'opacity-0'}`}>
+        <div className="text-center mb-16 animate-float-up">
+          <h2 className="font-serif font-bold text-3xl md:text-5xl mb-6 bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">
             Premium Value-Added Products
           </h2>
-          <p className={`text-muted-foreground text-lg md:text-xl max-w-4xl mx-auto leading-relaxed transition-all duration-700 ${isVisible ? 'animate-float-up' : 'opacity-0'}`} style={{ animationDelay: '0.1s' }}>
+          <p className="text-muted-foreground text-lg md:text-xl max-w-4xl mx-auto leading-relaxed" style={{ animationDelay: '0.1s' }}>
             We don't just grow—we transform. Our advanced processing capabilities convert raw agricultural materials
             into premium products that meet international quality standards and command premium market prices.
           </p>
@@ -109,7 +107,7 @@ export function ProductsShowcase() {
         {/* Current Products */}
         <div className="grid lg:grid-cols-2 gap-10 mb-16">
           {products.map((product, index) => (
-            <Card key={index} className={`overflow-hidden glass-card hover:shadow-2xl transition-all duration-500 group ${isVisible ? 'animate-float-up' : 'opacity-0 translate-y-8'}`} style={{ animationDelay: isVisible ? `${0.1 * (index + 1)}s` : undefined }}>
+            <Card key={index} className="overflow-hidden glass-card hover:shadow-2xl transition-all duration-500 group animate-float-up" style={{ animationDelay: `${0.1 * (index + 1)}s` }}>
               <div className="aspect-video relative overflow-hidden bg-gray-700">
                 <img
                   src={product.image || "/placeholder.svg"}
@@ -171,7 +169,7 @@ export function ProductsShowcase() {
           ))}
         </div>
 
-        <div className={`glass-card-enhanced p-10 rounded-2xl mb-12 transition-all duration-700 ${isVisible ? 'animate-float-up' : 'opacity-0'}`} style={{ animationDelay: '0.2s' }}>
+        <div className="glass-card-enhanced p-10 rounded-2xl mb-12 animate-float-up" style={{ animationDelay: '0.2s' }}>
           <div className="text-center mb-10">
             <h3 className="font-serif font-bold text-2xl md:text-3xl mb-4 flex items-center justify-center group">
               <TrendingUp className="h-6 w-6 text-emerald-600 mr-3 group-hover:rotate-12 transition-transform duration-300" />
@@ -187,8 +185,8 @@ export function ProductsShowcase() {
             {upcomingProducts.map((product, index) => (
               <div
                 key={index}
-                className={`glass-card p-6 rounded-xl hover:shadow-xl transition-all duration-300 group hover:scale-105 ${isVisible ? 'animate-float-up' : 'opacity-0'}`}
-                style={{ animationDelay: isVisible ? `${0.02 * (index + 1)}s` : undefined }}
+                className="glass-card p-6 rounded-xl hover:shadow-xl transition-all duration-300 group hover:scale-105 animate-float-up"
+                style={{ animationDelay: `${0.02 * (index + 1)}s` }}
               >
                 <div className="flex items-center justify-between mb-3">
                   <Leaf className="h-6 w-6 text-emerald-500 group-hover:text-emerald-600 group-hover:rotate-12 transition-all duration-300" />
@@ -213,7 +211,7 @@ export function ProductsShowcase() {
           </div>
         </div>
 
-        <div className={`glass-card-enhanced p-8 rounded-2xl mb-12 bg-gradient-to-r from-emerald-50/50 to-blue-50/50 dark:from-emerald-950/30 dark:to-blue-950/30 transition-all duration-700 ${isVisible ? 'animate-float-up' : 'opacity-0'}`} style={{ animationDelay: '0.3s' }}>
+        <div className="glass-card-enhanced p-8 rounded-2xl mb-12 bg-gradient-to-r from-emerald-50/50 to-blue-50/50 dark:from-emerald-950/30 dark:to-blue-950/30 animate-float-up" style={{ animationDelay: '0.3s' }}>
           <div className="text-center">
             <h3 className="font-serif font-bold text-2xl md:text-3xl mb-4 flex items-center justify-center group">
               <Award className="h-6 w-6 text-emerald-600 mr-3 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" />
@@ -240,7 +238,7 @@ export function ProductsShowcase() {
           </div>
         </div>
 
-        <div className={`text-center transition-all duration-700 ${isVisible ? 'animate-float-up' : 'opacity-0'}`} style={{ animationDelay: '0.4s' }}>
+        <div className="text-center animate-float-up" style={{ animationDelay: '0.4s' }}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-emerald-600 hover:bg-emerald-700 group/btn relative overflow-hidden">
                 <Link href="/products" className="flex items-center">

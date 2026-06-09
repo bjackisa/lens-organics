@@ -4,10 +4,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Sprout, Fish, Egg, TreePine, Wheat, Apple, ArrowRight } from "lucide-react"
 import Link from "next/link"
-import { useScrollAnimation } from "@/hooks/useParallax"
 
 export function OperationsPreview() {
-  const { elementRef, isVisible } = useScrollAnimation()
   const operations = [
     {
       icon: Sprout,
@@ -62,7 +60,7 @@ export function OperationsPreview() {
   ]
 
   return (
-    <section ref={elementRef} className="py-20 bg-gradient-to-br from-background via-muted/10 to-background relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-background via-muted/10 to-background relative overflow-hidden">
       {/* Background animations */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 right-0 w-96 h-96 rounded-full bg-blue-500/5 blur-3xl" />
@@ -70,11 +68,11 @@ export function OperationsPreview() {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className={`font-serif font-bold text-3xl md:text-5xl mb-6 bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent transition-all duration-700 ${isVisible ? 'animate-float-up' : 'opacity-0'}`}>
+        <div className="text-center mb-16 animate-float-up">
+          <h2 className="font-serif font-bold text-3xl md:text-5xl mb-6 bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">
             Integrated Agricultural Ecosystem
           </h2>
-          <p className={`text-muted-foreground text-lg md:text-xl max-w-4xl mx-auto leading-relaxed transition-all duration-700 ${isVisible ? 'animate-float-up' : 'opacity-0'}`} style={{ animationDelay: '0.1s' }}>
+          <p className="text-muted-foreground text-lg md:text-xl max-w-4xl mx-auto leading-relaxed" style={{ animationDelay: '0.1s' }}>
             Our diversified operations create powerful synergies across multiple agricultural sectors. Each enterprise
             complements the others, maximizing resource efficiency while building resilient revenue streams that
             position us for sustainable growth and international expansion.
@@ -85,8 +83,8 @@ export function OperationsPreview() {
           {operations.map((operation, index) => (
             <Card
               key={index}
-              className={`overflow-hidden hover:shadow-2xl transition-all duration-500 glass-card group hover:scale-105 ${isVisible ? 'animate-float-up' : 'opacity-0 translate-y-8'}`}
-              style={{ animationDelay: isVisible ? `${0.06 * (index + 1)}s` : undefined }}
+              className="overflow-hidden hover:shadow-2xl transition-all duration-500 glass-card group hover:scale-105 animate-float-up"
+              style={{ animationDelay: `${0.06 * (index + 1)}s` }}
             >
               <div className="aspect-video relative overflow-hidden bg-gray-700">
                 <img
@@ -130,7 +128,7 @@ export function OperationsPreview() {
           ))}
         </div>
 
-        <div className={`text-center transition-all duration-700 ${isVisible ? 'animate-float-up' : 'opacity-0'}`} style={{ animationDelay: '0.4s' }}>
+        <div className="text-center animate-float-up" style={{ animationDelay: '0.4s' }}>
           <div className="glass-card-enhanced p-8 rounded-2xl max-w-3xl mx-auto mb-8 group hover:shadow-2xl transition-all duration-300">
             <h3 className="font-serif font-bold text-2xl md:text-3xl mb-4 group-hover:text-emerald-600 transition-colors">Unified Management, Multiplied Results</h3>
             <p className="text-muted-foreground mb-6 text-lg leading-relaxed">
