@@ -10,18 +10,14 @@ export function useParallax(speed = 0.5) {
     const handleScroll = () => {
       if (!elementRef.current) return
 
-      const rect = elementRef.current.getBoundingClientRect()
-      const elementTop = rect.top
-      const elementHeight = rect.height
-      const windowHeight = window.innerHeight
-
-      // Only apply parallax when element is in viewport
-      if (elementTop < windowHeight && elementTop + elementHeight > 0) {
-        const scrolled = window.scrollY
-        const elementOffset = elementRef.current.offsetTop
-        const distance = scrolled - elementOffset
-        setOffset(distance * speed)
-      }
+      // Get the scroll position from the top of the page
+      const scrolled = window.scrollY
+      const elementOffset = elementRef.current.offsetTop
+      
+      // Calculate the parallax offset based on how much we've scrolled
+      // The background should move slower than the scroll speed
+      const distance = scrolled * speed
+      setOffset(distance)
     }
 
     window.addEventListener('scroll', handleScroll, { passive: true })
